@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlms="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+<table>
+    <thead>
+    <caption><b>Worker</b></caption>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Department ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="worker : ${worker}">
+        <td th:text="${worker.id}"></td>
+        <td th:text="${worker.name}"></td>
+        <td th:text="${worker.surname}"></td>
+        <td th:text="${worker.department.id}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
